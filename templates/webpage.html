@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Our Website</title>
+  <!-- css reset -->
+  <link rel="stylesheet" href="../static/css/cssreset.css">
+  <!-- for icons -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+  <!-- our css (KEEP LAST) -->
+  <link rel="stylesheet" href="../static/css/webpage.css">
+</head>
+
+<body>
+  <button class="tablink" onclick="openPage('Home', this, '#55d6aa')" id="defaultOpen"> Home</button>
+  <button class="tablink" onclick="openPage('StressatWork', this, '#55d6aa')"> Stress at Work</button>
+  <button class="tablink" onclick="openPage('DealingwithStress', this, '#55d6aa')">Dealing with Stress</button>
+  <button class="tablink" onclick="openPage('ContactUs', this, '#55d6aa')">Contact Us</button>
+
+
+
+  <div id="Home" class="tabcontent">
+    <img src="https://www.shefinds.com/files/2018/06/manage-stress-work.jpg" alt="girl coffee">
+  </div>
+
+
+
+  <div id="StressatWork" class="tabcontent">
+    <img src="https://www.rebuildyourvision.com/wp-content/uploads/2016/08/5-Tips-to-Eliminate-Visual-Stress-at-Work.jpg">
+
+  </div>
+
+  <div id="DealingwithStress" class="tabcontent">
+    <img src="https://www.mediagrouponlineinc.com/wp-content/uploads/2017/10/sales-training_226537732-1000x640.jpg">
+
+  </div>
+
+  <div id="ContactUs" class="tabcontent">
+    <img src="http://www.success.com/sites/default/files/main/blogposts/waystogetandstayhappyatwork.jpg" </div>
+
+    <script>
+      function openPage(pageName, elmnt, color) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].style.backgroundColor = "";
+        }
+        document.getElementById(pageName).style.display = "block";
+        elmnt.style.backgroundColor = color;
+
+      }
+      // Get the element with id="defaultOpen" and click on it
+      document.getElementById("defaultOpen").click();
+    </script>
+</body>
+
+</html>
