@@ -1,74 +1,72 @@
-
-
+<!DOCTYPE html>
+<html>
 <head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="./webpage.css" rel="stylesheet">
+<style>
+* {box-sizing: border-box}
 
-<style> 
+/* Set height of body and the document to 100% */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial;
+}
 
-header 
-{text-align: center; 
-background: url("https://www.robertsoncooper.com/images/pressure-points/header.jpg"); 
-background-size: cover; margin:0 auto
-color:white;}
-
-a{color:black; font-family: helvetica}
-
-h1 {font-size: 50px;}
-
-li{display:inline;padding:0px 10px 0px 10px}
-
-article 
-      {
-      	max-width:500px;
-      padding:20px;
-      margin: 0 auto; 
-
-       @media (max-width: 500px) {
-        body {
-          background:red;}
-      }
-  }
-
-
+/* Style tab links */
 
 </style>
 </head>
-<header>
 
-<b><h1>How to stay mentally healthy at work!</h1></b>
- <li><a href="#">Home</a></li>
- <li><a href="#">About Us</a></li>
- <li><a href="#">Contact</a></li>
+<body>
 
-      
+<button class="tablink" onclick="openPage('Home', this, '#55d6aa')" 
+  id="defaultOpen"> Home</button>
+<button class="tablink" onclick="openPage('StressatWork', this, '#55d6aa')"> Stress at Work</button>
+<button class="tablink" onclick="openPage('DealingwithStress', this, '#55d6aa')">Dealing with Stress</button>
+<button class="tablink" onclick="openPage('ContactUs', this, '#55d6aa')">Contact Us</button>
 
-</header>
 
- <article>
 
+<div id="Home" class="tabcontent">
+<img src="https://www.shefinds.com/files/2018/06/manage-stress-work.jpg" alt="girl coffee">
+</div>
+
+
+
+<div id="StressatWork" class="tabcontent">
+ <img src="https://www.rebuildyourvision.com/wp-content/uploads/2016/08/5-Tips-to-Eliminate-Visual-Stress-at-Work.jpg">
  
-  <h2>Example</h2>
-  <div class=firstpara>
-  <p>Employees feel stress when they can’t cope with pressures and other issues. Employers should match demands to employees’ skills and knowledge. For example, employees can get stressed if they feel they don’t have the skills or time to meet tight deadlines. Providing planning, training and support can reduce pressure and bring stress levels down.</p></article>
 </div>
 
-<div class=secondpara>
-<article> <p>HSE defines stress as ‘the adverse reaction people have to excessive pressures or other types of demand placed on them’.
+<div id="DealingwithStress" class="tabcontent">
+  <img src="https://www.mediagrouponlineinc.com/wp-content/uploads/2017/10/sales-training_226537732-1000x640.jpg">
 
-Employees feel stress when they can’t cope with pressures and other issues. Employers should match demands to employees’ skills and knowledge. For example, employees can get stressed if they feel they don’t have the skills or time to meet tight deadlines. Providing planning, training and support can reduce pressure and bring stress levels down.
+</div>
 
-Stress affects people differently – what stresses one person may not affect another. Factors like skills and experience, age or disability may all affect whether an employee can cope.
+<div id="ContactUs" class="tabcontent">
+  <img src= "http://www.success.com/sites/default/files/main/blogposts/waystogetandstayhappyatwork.jpg"
+</div>
 
-There are six main areas of work design which can effect stress levels. You should manage these properly. They are:</p></article>
+<script>
+function openPage(pageName,elmnt,color) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+    }
+    document.getElementById(pageName).style.display = "block";
+    elmnt.style.backgroundColor = color;
 
-
-<p><h3>HSE defines stress as ‘the adverse reaction people have to excessive pressures or other types of demand placed on them’. Employees feel stress when they can’t cope with pressures and other issues. Employers should match demands to employees’ skills and knowledge. For example, employees can get stressed if they feel they don’t have the skills or time to meet tight deadlines. Providing planning, training and support can reduce pressure and bring stress levels down. Stress affects people differently – what stresses one person may not affect another. Factors like skills and experience, age or disability may all affect whether an employee can cope. There are six main areas of work design which can effect stress levels. You should manage these properly. They are: </p> </h3>
-
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+     
 </body>
-</div>
-
-<div class=thirdpara>
-<h3 style="color: brown"> Josie MK </h3>
-Lets you laod faster if style isn't in head. 
-Root relative links
-</div>3
+</html> 
